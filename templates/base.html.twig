@@ -1,29 +1,19 @@
-{# templates/base.html.twig #}
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Trang web của tôi{% endblock %}</title>
-</head>
-<body>
-    <header>
-        <h1>Trang web của tôi</h1>
-        <nav>
-            <ul>
-                <li><a href="{{ path('home') }}">Trang chủ</a></li>
-                <li><a href="{{ path('products') }}">Sản phẩm</a></li>
-                <li><a href="{{ path('categories') }}">Danh mục</a></li>
-                <li><a href="{{ path('cart') }}">Giỏ hàng</a></li>
-            </ul>
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
 
-    <main>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
         {% block body %}{% endblock %}
-    </main>
-
-    <footer>
-        &copy; {{ "now"|date("Y") }} - Trang web của tôi
-    </footer>
-</body>
+    </body>
 </html>
