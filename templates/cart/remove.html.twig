@@ -1,0 +1,14 @@
+{# templates/cart/remove.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Sản phẩm đã bị xóa khỏi giỏ hàng{% endblock %}
+
+{% block body %}
+    <h1>Sản phẩm đã bị xóa khỏi giỏ hàng</h1>
+    
+    <p>Sản phẩm "{{ removedProduct.name }}" đã bị xóa khỏi giỏ hàng.</p>
+    
+    <a href="{{ path('cart') }}">Quay lại giỏ hàng</a>
+</div>
+{% endblock %}

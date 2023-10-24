@@ -1,0 +1,14 @@
+{# templates/cart/add.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Sản phẩm đã được thêm vào giỏ hàng{% endblock %}
+
+{% block body %}
+    <h1>Sản phẩm đã được thêm vào giỏ hàng</h1>
+    
+    <p>Sản phẩm "{{ addedProduct.name }}" đã được thêm vào giỏ hàng.</p>
+    
+    <a href="{{ path('cart') }}">Quay lại giỏ hàng</a>
+</div>
+{% endblock %}

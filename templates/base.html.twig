@@ -1,0 +1,29 @@
+{# templates/base.html.twig #}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Trang web của tôi{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Trang web của tôi</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ path('home') }}">Trang chủ</a></li>
+                <li><a href="{{ path('products') }}">Sản phẩm</a></li>
+                <li><a href="{{ path('categories') }}">Danh mục</a></li>
+                <li><a href="{{ path('cart') }}">Giỏ hàng</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+
+    <footer>
+        &copy; {{ "now"|date("Y") }} - Trang web của tôi
+    </footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{# templates/product/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Danh sách sản phẩm{% endblock %}
+
+{% block body %}
+    <h1>Danh sách sản phẩm</h1>
+
+    <ul>
+        {% for product in products %}
+            <li>
+                <a href="{{ path('product_detail', { 'id': product.id }) }}">{{ product.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

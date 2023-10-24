@@ -1,0 +1,15 @@
+{# templates/user/detail.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Chi tiết người dùng: {{ user.username }}{% endblock %}
+
+{% block body %}
+    <h1>Chi tiết người dùng: {{ user.username }}</h1>
+
+    <p>Email: {{ user.email }}</p>
+    <p>Tên đầy đủ: {{ user.fullName }}</p>
+    
+    <a href="{{ path('users') }}">Quay lại danh sách người dùng</a>
+</div>
+{% endblock %}

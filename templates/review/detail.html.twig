@@ -1,0 +1,17 @@
+{# templates/review/detail.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Chi tiết đánh giá: Đánh giá #{{ review.id }}{% endblock %}
+
+{% block body %}
+    <h1>Chi tiết đánh giá: Đánh giá #{{ review.id }}</h1>
+
+    <p>Người đánh giá: {{ review.user.username }}</p>
+    <p>Điểm đánh giá: {{ review.rating }}/5</p>
+    <p>Ngày đánh giá: {{ review.createdAt|date("d/m/Y H:i") }}</p>
+    <p>Nội dung đánh giá: {{ review.content }}</p>
+
+    <a href="{{ path('reviews') }}">Quay lại danh sách đánh giá sản phẩm</a>
+</div>
+{% endblock %}
